@@ -16,10 +16,10 @@ long long i = 0;
 return s1;
 }
 string itc_reverse_str(string str){
-long long i = itc_len(str);
+long long i = itc_len(str) - 1;
 string str1 = "";
 while (i >= 0){
-    str1 += str[i-1];
+    str1 += str[i];
     i--;
 }
 return str1;
