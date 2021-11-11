@@ -5,14 +5,16 @@ s1 += name;
 return s1;
 }
 string itc_even_place(string str){
-string s1;
-long long i = 1;
+string s1 = "";
+long long i = 0;
 if (itc_len(str) == 1 || itc_len(str) == 0){
     return "-1";
 }
  while (str[i] != '\0'){
-    s1 += str[i];
-    i = i + 2;
+    if (i % 2 != 0){
+        s1 += str[i];
+    }
+    i++;
  }
 return s1;
 }
