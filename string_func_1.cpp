@@ -7,6 +7,9 @@ return s1;
 string itc_even_place(string str){
 string s1;
 long long i = 0;
+if (itc_len(str) == 1){
+    return "-1";
+}
  while (str[i] != '\0'){
     if (i%2 != 0){
         s1 += str[i];
