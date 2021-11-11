@@ -14,7 +14,22 @@ while(index != -1){
 return str1;
 }
 
-
+int itc_max_char_on_end(string str){
+    long long max_number = 0, counter = 0, i = 0;
+    while (i <= itc_len(str)){
+        if (str[i] >= '0' || str[i] <= '9'){
+            counter++;
+        }
+        if (str[i] < '0' || str[i] > '9'){
+            if (max_number < counter){
+            max_number = counter;
+            }
+        counter = 0;
+        }
+    i++;
+    }
+    return max_number - 1;
+}
 
 
 
